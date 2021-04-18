@@ -1,0 +1,20 @@
+@import "../../colors";
+
+.main {
+  display: flex;
+  height: 75px;
+  color: $white245;
+  background-color: $grey33;
+  border-bottom: 1px solid $primary;
+
+  img {
+    height: 51px;
+    padding: 12px 21px;
+  }
+
+  .headline {
+    color: $primary;
+    font-size: 21px;
+    font-family: cursive;
+  }
+}

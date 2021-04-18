@@ -18,51 +18,14 @@ body {
   font-family: Palatino, sans-serif;
   font-size: 16px;
 
-  .header {
-    height: 75px;
-    color: $white245;
-    background-color: $grey33;
-    border-bottom: 1px solid $primary;
 
-    img {
-      height: 51px;
-      padding: 12px 21px;
-    }
-  }
 
   .wrapper {
     display: grid;
     grid-template-columns: 24% 76%;
 
-    .nav {
-      margin: 21px 25px 21px 15px;
-      padding: 10px;
-      background-color: $grey33;
-      color: $white245;
-      border: 1px solid $primary;
-      border-radius: 12px;
-
-      .links {
-        line-height: 25px;
-        font-size: 18px;
-        margin: 0 21px;
-        padding: 15px 0;
-        cursor: pointer;
-
-        &:hover {
-          transition: 200ms;
-          color: $white200;
-        }
-
-        &:active {
-          color: $primary;
-          transition: 200ms;
-        }
-      }
-    }
-
     .content {
-
+      padding: 3px 10px;
     }
   }
 }

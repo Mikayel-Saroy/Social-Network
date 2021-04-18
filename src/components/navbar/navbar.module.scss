@@ -1,0 +1,28 @@
+@import "../../colors";
+
+.main {
+  margin: 21px 15px;
+  padding: 10px;
+  background-color: $grey33;
+  color: $white245;
+  border: 1px solid $primary;
+  border-radius: 12px;
+
+  .links {
+    line-height: 25px;
+    font-size: 18px;
+    margin: 0 21px;
+    padding: 15px 0;
+    cursor: pointer;
+
+    &:hover {
+      transition: 200ms;
+      color: $white200;
+    }
+
+    &:active {
+      color: $primary;
+      transition: 200ms;
+    }
+  }
+}
