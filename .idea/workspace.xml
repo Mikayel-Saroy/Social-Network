@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f9dfd7c-13f8-4818-a23c-8d765b0a68b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/react-wall.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/content/profile/profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/content/profile/profile.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/header.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/navbar.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/user_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/content/profile/my-posts/Post/post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/content/profile/my-posts/Post/post.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/content/profile/my-posts/my-posts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/content/profile/my-posts/my-posts.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/profile/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/profile/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +38,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/content/profile" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/icons" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -51,11 +49,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/icons" />
+      <recent name="$PROJECT_DIR$/src/components/content/profile/my-posts/Post" />
+      <recent name="$PROJECT_DIR$/src/components/content/profile/my-posts" />
       <recent name="$PROJECT_DIR$/src/components/content/profile" />
       <recent name="$PROJECT_DIR$/src/components/navbar" />
-      <recent name="$PROJECT_DIR$/src/components" />
-      <recent name="$PROJECT_DIR$/src/assets/images" />
-      <recent name="$PROJECT_DIR$/src/assets/icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/navbar" />
@@ -72,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617796577895</updated>
       <workItem from="1617796582282" duration="3768000" />
-      <workItem from="1618294070443" duration="6010000" />
+      <workItem from="1618294070443" duration="10095000" />
     </task>
     <servers />
   </component>

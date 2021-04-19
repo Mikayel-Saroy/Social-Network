@@ -1,0 +1,19 @@
+@import "../../../../../colors";
+
+.main {
+  display: flex;
+  padding: 15px 0;
+
+  .user {
+    height: 33px;
+    width: 33px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .text {
+    margin: 0 0 0 20px;
+  }
+}

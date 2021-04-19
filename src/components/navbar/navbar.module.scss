@@ -15,6 +15,10 @@
     padding: 15px 0;
     cursor: pointer;
 
+    .test {
+      color: darkred;
+    }
+
     &:hover {
       transition: 200ms;
       color: $white200;
@@ -24,5 +28,9 @@
       color: $primary;
       transition: 200ms;
     }
+  }
+
+  .active {
+    color: $primary;
   }
 }
