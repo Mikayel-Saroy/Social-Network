@@ -1,8 +1,10 @@
 @import "../../colors";
 
+$headerHeight: 75px;
+
 .main {
   display: flex;
-  height: 75px;
+  height: $headerHeight;
   color: $white245;
   background-color: $grey33;
   border-bottom: 1px solid $primary;
@@ -13,6 +15,7 @@
   }
 
   .headline {
+    line-height: $headerHeight;
     color: $primary;
     font-size: 21px;
     font-family: cursive;

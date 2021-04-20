@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f9dfd7c-13f8-4818-a23c-8d765b0a68b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/user_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/content/profile/my-posts/Post/post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/content/profile/my-posts/Post/post.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/content/profile/my-posts/my-posts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/content/profile/my-posts/my-posts.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/profile/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/profile/profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/colors.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/profile/my-posts/Post/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/profile/my-posts/Post/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/profile/my-posts/Post/post.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/profile/my-posts/Post/post.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/profile/my-posts/my-posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/profile/my-posts/my-posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617796577895</updated>
       <workItem from="1617796582282" duration="3768000" />
-      <workItem from="1618294070443" duration="10095000" />
+      <workItem from="1618294070443" duration="12826000" />
     </task>
     <servers />
   </component>

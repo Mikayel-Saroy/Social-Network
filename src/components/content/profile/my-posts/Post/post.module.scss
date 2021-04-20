@@ -1,8 +1,8 @@
 @import "../../../../../colors";
 
 .main {
-  display: flex;
   padding: 15px 0;
+  display: flex;
 
   .user {
     height: 33px;
@@ -13,7 +13,19 @@
     }
   }
 
-  .text {
+  .content {
     margin: 0 0 0 20px;
+
+    .text {
+    }
+
+    .like {
+      margin: 5px;
+      cursor: pointer;
+
+      &:hover {
+        color: $grey90;
+      }
+    }
   }
 }

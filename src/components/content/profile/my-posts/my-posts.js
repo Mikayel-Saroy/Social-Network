@@ -13,9 +13,8 @@ const MyPosts = () => {
                 <textarea placeholder="Enter your text."/>
                 <button>Add Post</button>
             </div>
-            <Post />
-            <Post />
-            <Post />
+            <Post message="Hi, how are you?" likes={20}/>
+            <Post message="It's my first post." likes={15}/>
         </div>
     );
 }
