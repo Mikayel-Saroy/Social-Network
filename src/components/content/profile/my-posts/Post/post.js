@@ -6,7 +6,7 @@ const Post = (props) => {
     const {message, likes} = props;
 
     return (
-        <div className={st.main}>
+        <div className={st.post}>
             <div className={st.user}>
                 <img src={user_icon} alt="user"/>
             </div>

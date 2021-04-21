@@ -1,11 +1,11 @@
-@import "../../../colors";
+@import "../../../const";
 
 .main {
   .wallpaper {
     text-align: center;
     height: 160px;
     background-color: $black;
-    border-radius: 12px;
+    border-radius: $borderRadius;
 
     img {
       height: 100%;

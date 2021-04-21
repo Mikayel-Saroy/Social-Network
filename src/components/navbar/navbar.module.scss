@@ -1,4 +1,4 @@
-@import "../../colors";
+@import "../../const";
 
 .main {
   display: table;
@@ -6,7 +6,7 @@
   padding: 10px;
   background-color: $grey33;
   border: 1px solid $primary;
-  border-radius: 12px;
+  border-radius: $borderRadius;
 
   .links {
     line-height: 25px;
