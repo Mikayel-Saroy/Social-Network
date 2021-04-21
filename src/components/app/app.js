@@ -13,7 +13,7 @@ import Settings from "../content/settings/settings";
 const App = () => {
     return (
         <BrowserRouter>
-        <div className={st.main}>
+        <div className={st.app}>
             <Header/>
             <div className={st.wrapper}>
                 <Navbar/>

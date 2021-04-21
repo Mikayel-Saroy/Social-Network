@@ -1,0 +1,19 @@
+@import "../../../../const";
+
+.profileInfo {
+  .wallpaper {
+    text-align: center;
+    height: 160px;
+    background-color: $black;
+    border-radius: $borderRadius;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .description {
+    text-align: center;
+    padding: 15px;
+  }
+}

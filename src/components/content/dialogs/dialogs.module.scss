@@ -10,10 +10,10 @@
   border-radius: $borderRadius;
   background-color: $grey33;
 
-  .dialogsItems {
+  .contacts {
     padding: 21px 10px;
 
-    .dialog {
+    .contact {
       padding: 10px;
       font-size: 18px;
       cursor: pointer;
@@ -34,7 +34,7 @@
     }
 
     .active {
-      color: $primary;
+      @extend .contact;
 
       a {
         color: $primary;

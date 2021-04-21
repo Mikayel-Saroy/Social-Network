@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f9dfd7c-13f8-4818-a23c-8d765b0a68b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/content/profile/profile-info/profile-info.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/content/profile/profile-info/profile.info.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/content/dialogs/dialogs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/dialogs/dialogs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/dialogs/dialogs.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/dialogs/dialogs.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/profile/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/profile/profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/profile/profile.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/profile/profile.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1617796577895</updated>
       <workItem from="1617796582282" duration="3768000" />
-      <workItem from="1618294070443" duration="20414000" />
+      <workItem from="1618294070443" duration="22145000" />
     </task>
     <servers />
   </component>
