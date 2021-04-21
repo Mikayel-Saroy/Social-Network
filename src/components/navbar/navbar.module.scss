@@ -1,10 +1,10 @@
 @import "../../colors";
 
 .main {
+  display: table;
   margin: 21px 15px;
   padding: 10px;
   background-color: $grey33;
-  color: $white245;
   border: 1px solid $primary;
   border-radius: 12px;
 
@@ -15,22 +15,27 @@
     padding: 15px 0;
     cursor: pointer;
 
-    .test {
-      color: darkred;
-    }
-
-    &:hover {
-      transition: 200ms;
-      color: $white200;
-    }
-
-    &:active {
+    .activeLink {
       color: $primary;
-      transition: 200ms;
-    }
-  }
 
-  .active {
-    color: $primary;
+      &:hover {
+        color: $primary09;
+      }
+    }
+
+    a {
+      color: $white245;
+      text-decoration: none;
+
+      &:hover {
+        transition: 200ms;
+        color: $white200;
+      }
+
+      &:active {
+        color: $primary;
+        transition: 200ms;
+      }
+    }
   }
 }
