@@ -5,12 +5,7 @@ import Post from "./Post/post";
 const PLACEHOLDER = "Enter your text.";
 
 
-const MyPosts = () => {
-    const posts = [
-        {id: 1, message: "Hi, how are you?", likesCount: 12},
-        {id: 2, message: "It's my first post.", likesCount: 21},
-    ];
-
+const MyPosts = ({posts}) => {
     const postElem = posts.map(({id, message, likesCount}) => {
         return <Post key={id} id={id} message={message} likesCount={likesCount}/>;
     })

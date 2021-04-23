@@ -1,5 +1,5 @@
 import React from "react";
-import st from "./dialogs.module.scss";
+import st from "./messages.module.scss";
 import {NavLink} from "react-router-dom";
 
 const Contact = ({id, name}) => {
@@ -16,20 +16,7 @@ const Contact = ({id, name}) => {
 const Message = ({id, message}) => <div className={st.message}>{message}</div>
 
 
-const Dialogs = () => {
-    const contacts = [
-        {id: 1, name: "Benjamin"},
-        {id: 2, name: "Albert"},
-        {id: 3, name: "Henry"},
-        {id: 4, name: "Gary"},
-        {id: 5, name: "Robert"},
-    ];
-    const messages = [
-        {id: 1, message: "Hi Benjamin."},
-        {id: 2, message: "Hi, How are you?"},
-        {id: 3, message: "I'm fine, thanks."},
-    ];
-
+const Messages = ({contacts, messages}) => {
     const contactsElem = contacts.map(({id, name}) => {
         return <Contact key={id} id={id} name={name}/>;
     })
@@ -46,4 +33,4 @@ const Dialogs = () => {
     );
 }
 
-export default Dialogs;
+export default Messages;
