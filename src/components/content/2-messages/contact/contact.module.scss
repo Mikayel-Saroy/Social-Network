@@ -1,0 +1,33 @@
+@import "../../../../const";
+
+.contact {
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+
+  a {
+    color: $white245;
+    text-decoration: none;
+
+    &:hover {
+      transition: 200ms;
+      color: $white200;
+    }
+
+    &:active {
+      color: $primary;
+    }
+  }
+}
+
+.active {
+  @extend .contact;
+
+  a {
+    color: $primary;
+
+    &:hover {
+      color: $primary09;
+    }
+  }
+}
