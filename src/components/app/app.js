@@ -10,9 +10,8 @@ import News from "../content/4-news/news";
 import Music from "../content/5-music/music";
 import Settings from "../content/6-settings/settings";
 
-const App = ({data}) => {
-    const {posts, contacts, messages} = data;
-
+const App = ({state}) => {
+    const {profilePage, dialogsPage} = state;
 
     return (
         <BrowserRouter>
@@ -21,9 +20,10 @@ const App = ({data}) => {
             <div className={st.wrapper}>
                 <Navbar/>
                 <div className={st.content}>
-                    <Route render={() => <Profile posts={posts}/>} path="/profile"/>
-                    <Route render={() => <Messages contacts={contacts}
-                                                   messages={messages}/>} path="/dialogs"/>
+                    <Route render={() => <Profile data={profilePage}/>}
+                           path="/profile"/>
+                    <Route render={() => <Messages data={dialogsPage}/>}
+                           path="/dialogs"/>
                     <Route render={() => <Users/>} path="/users"/>
                     <Route render={() => <News/>} path="/news"/>
                     <Route render={() => <Music/>} path="/music"/>

@@ -3,7 +3,10 @@ import st from "./messages.module.scss";
 import Contact from "./contact/contact";
 import Message from "./message/message";
 
-const Messages = ({contacts, messages}) => {
+const Messages = ({data}) => {
+    debugger;
+    const {contacts, messages} = data;
+
     const contactsEl = contacts.map(({id, name}) => {
         return <Contact key={id} id={id} name={name}/>;
     })
