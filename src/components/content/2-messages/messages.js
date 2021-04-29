@@ -4,7 +4,6 @@ import Contact from "./contact/contact";
 import Message from "./message/message";
 
 const Messages = ({data}) => {
-    debugger;
     const {contacts, messages} = data;
 
     const contactsEl = contacts.map(({id, name}) => {
@@ -15,10 +14,25 @@ const Messages = ({data}) => {
         return <Message key={id} id={id} message={message}/>;
     })
 
+    let newMessageElement = React.createRef();
+
+    const addMessage = () => {
+        let message = newMessageElement.current.value;
+        alert(message);
+    }
+
     return (
         <div className={st.dialogs}>
             <div className={st.contacts}>{contactsEl}</div>
-            <div className={st.messages}>{messagesEl}</div>
+            <div className={st.messages}>
+                <div className={st.messagesBox}>
+                    {messagesEl}
+                </div>
+                <div className={st.inputBox}>
+                    <input type="text" ref={newMessageElement}/>
+                    <button onClick={addMessage}>Send</button>
+                </div>
+            </div>
         </div>
     );
 }

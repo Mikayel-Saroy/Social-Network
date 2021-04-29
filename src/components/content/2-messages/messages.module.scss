@@ -15,10 +15,52 @@
   }
 
   .messages {
-    padding: 21px 10px;
+    position: relative;
     background-color: $grey50;
     border-bottom-right-radius: $borderRadius;
     border-top-right-radius: $borderRadius;
     color: $white245;
+
+    .messagesBox {
+      padding: 21px 10px;
+    }
+
+    .inputBox {
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 52px;
+      border-bottom-right-radius: 11px;
+      background-color: grey;
+
+      input {
+        margin: 10px 12px;
+        padding: 0 8px;
+        width: 100%;
+        height: 30px;
+        border: 0;
+        border-radius: $borderRadius;
+        background-color: $white245;
+        outline: none;
+      }
+
+      button {
+        margin: 10px 12px 10px 0;
+        width: 60px;
+        height: 32px;
+        border: 0;
+        border-radius: $borderRadius;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $white230;
+        }
+
+        &:active {
+          background-color: $white245;
+        }
+      }
+    }
   }
 }
