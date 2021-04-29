@@ -10,27 +10,28 @@ import News from "../content/4-news/news";
 import Music from "../content/5-music/music";
 import Settings from "../content/6-settings/settings";
 
-const App = ({state}) => {
+const App = ({state, addPost}) => {
     const {profilePage, dialogsPage} = state;
 
     return (
         <BrowserRouter>
-        <div className={st.app}>
-            <Header/>
-            <div className={st.wrapper}>
-                <Navbar/>
-                <div className={st.content}>
-                    <Route render={() => <Profile data={profilePage}/>}
-                           path="/profile"/>
-                    <Route render={() => <Messages data={dialogsPage}/>}
-                           path="/dialogs"/>
-                    <Route render={() => <Users/>} path="/users"/>
-                    <Route render={() => <News/>} path="/news"/>
-                    <Route render={() => <Music/>} path="/music"/>
-                    <Route render={() => <Settings/>} path="/settings"/>
+            <div className={st.app}>
+                <Header/>
+                <div className={st.wrapper}>
+                    <Navbar/>
+                    <div className={st.content}>
+                        <Route render={() => <Profile data={profilePage}
+                                                      addPost={addPost}/>}
+                               path="/profile"/>
+                        <Route render={() => <Messages data={dialogsPage}/>}
+                               path="/dialogs"/>
+                        <Route render={() => <Users/>} path="/users"/>
+                        <Route render={() => <News/>} path="/news"/>
+                        <Route render={() => <Music/>} path="/music"/>
+                        <Route render={() => <Settings/>} path="/settings"/>
+                    </div>
                 </div>
             </div>
-        </div>
         </BrowserRouter>
     );
 }
