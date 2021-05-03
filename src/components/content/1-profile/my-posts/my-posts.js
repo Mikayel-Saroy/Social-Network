@@ -5,7 +5,9 @@ import Post from "./Post/post";
 const PLACEHOLDER = "Enter your text.";
 
 
-const MyPosts = ({posts, addPost}) => {
+const MyPosts = ({data, addPost, updateNewPostText}) => {
+    const {newPostText, posts} = data;
+
     const postElem = posts.map(({id, message, likesCount}) => {
         return <Post key={id} id={id} message={message} likesCount={likesCount}/>;
     })
@@ -13,8 +15,12 @@ const MyPosts = ({posts, addPost}) => {
     let newPostElement = React.createRef();
 
     const processPost = () => {
-        let post = newPostElement.current.value
-        addPost(post);
+        addPost();
+    }
+
+    const processNewPostText = () => {
+        let post = newPostElement.current.value;
+        updateNewPostText(post);
     }
 
     return (
@@ -22,7 +28,10 @@ const MyPosts = ({posts, addPost}) => {
             <h1>My Posts</h1>
             <div className={st.new_post}>
                 <h3>New Post</h3>
-                <textarea placeholder={PLACEHOLDER} ref={newPostElement}/>
+                <textarea placeholder={PLACEHOLDER}
+                          ref={newPostElement}
+                          value={newPostText}
+                          onChange={processNewPostText}/>
                 <button onClick={processPost}>Add Post</button>
             </div>
             {postElem}

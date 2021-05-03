@@ -10,7 +10,7 @@ import News from "../content/4-news/news";
 import Music from "../content/5-music/music";
 import Settings from "../content/6-settings/settings";
 
-const App = ({state, addPost}) => {
+const App = ({state, updateNewPostText, addPost, updateNewMessageText, addMessage}) => {
     const {profilePage, dialogsPage} = state;
 
     return (
@@ -21,9 +21,12 @@ const App = ({state, addPost}) => {
                     <Navbar/>
                     <div className={st.content}>
                         <Route render={() => <Profile data={profilePage}
+                                                      updateNewPostText={updateNewPostText}
                                                       addPost={addPost}/>}
                                path="/profile"/>
-                        <Route render={() => <Messages data={dialogsPage}/>}
+                        <Route render={() => <Messages data={dialogsPage}
+                                                       updateNewMessageText={updateNewMessageText}
+                                                       addMessage={addMessage}/>}
                                path="/dialogs"/>
                         <Route render={() => <Users/>} path="/users"/>
                         <Route render={() => <News/>} path="/news"/>

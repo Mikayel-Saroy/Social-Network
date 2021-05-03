@@ -6,7 +6,7 @@ const USER_ALT = "user";
 
 
 const Post = (props) => {
-    const {id, message, likes} = props;
+    const {id, message, likesCount} = props;
 
     return (
         <div className={st.post}>
@@ -15,7 +15,7 @@ const Post = (props) => {
             </div>
             <div className={st.content}>
                 <div className={st.text}>{message}</div>
-                <div className={st.like}>like {likes}</div>
+                <div className={st.like}>like {likesCount}</div>
             </div>
         </div>
     );

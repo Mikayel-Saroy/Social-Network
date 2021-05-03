@@ -3,8 +3,8 @@ import st from "./messages.module.scss";
 import Contact from "./contact/contact";
 import Message from "./message/message";
 
-const Messages = ({data}) => {
-    const {contacts, messages} = data;
+const Messages = ({data, updateNewMessageText, addMessage}) => {
+    const {newMessageText, contacts, messages} = data;
 
     const contactsEl = contacts.map(({id, name}) => {
         return <Contact key={id} id={id} name={name}/>;
@@ -16,9 +16,13 @@ const Messages = ({data}) => {
 
     let newMessageElement = React.createRef();
 
-    const addMessage = () => {
+    const processMessage = () => {
+        addMessage();
+    }
+
+    const processNewMessageText = () => {
         let message = newMessageElement.current.value;
-        alert(message);
+        updateNewMessageText(message);
     }
 
     return (
@@ -29,8 +33,11 @@ const Messages = ({data}) => {
                     {messagesEl}
                 </div>
                 <div className={st.inputBox}>
-                    <input type="text" ref={newMessageElement}/>
-                    <button onClick={addMessage}>Send</button>
+                    <input type="text"
+                           ref={newMessageElement}
+                           value={newMessageText}
+                           onChange={processNewMessageText}/>
+                    <button onClick={processMessage}>Send</button>
                 </div>
             </div>
         </div>
