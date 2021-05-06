@@ -6,7 +6,11 @@ const USER_ALT = "user";
 
 
 const Post = (props) => {
-    const {id, message, likesCount} = props;
+    const {id, message, likesCount, addLike} = props;
+
+    const processAddLike = () => {
+        addLike(id);
+    }
 
     return (
         <div className={st.post}>
@@ -15,7 +19,7 @@ const Post = (props) => {
             </div>
             <div className={st.content}>
                 <div className={st.text}>{message}</div>
-                <div className={st.like}>like {likesCount}</div>
+                <div className={st.like} onClick={processAddLike}>like {likesCount}</div>
             </div>
         </div>
     );

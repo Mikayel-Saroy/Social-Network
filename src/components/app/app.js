@@ -10,7 +10,15 @@ import News from "../content/4-news/news";
 import Music from "../content/5-music/music";
 import Settings from "../content/6-settings/settings";
 
-const App = ({state, updateNewPostText, addPost, updateNewMessageText, addMessage}) => {
+const App = (props) => {
+    const {
+        state,
+        updateNewPostText,
+        addPost,
+        addLike,
+        updateNewMessageText,
+        addMessage,
+    } = props;
     const {profilePage, dialogsPage} = state;
 
     return (
@@ -22,7 +30,8 @@ const App = ({state, updateNewPostText, addPost, updateNewMessageText, addMessag
                     <div className={st.content}>
                         <Route render={() => <Profile data={profilePage}
                                                       updateNewPostText={updateNewPostText}
-                                                      addPost={addPost}/>}
+                                                      addPost={addPost}
+                                                      addLike={addLike}/>}
                                path="/profile"/>
                         <Route render={() => <Messages data={dialogsPage}
                                                        updateNewMessageText={updateNewMessageText}

@@ -5,6 +5,8 @@ let state = {
     profilePage: {
         newPostText: "",
         posts: [
+            {id: 4, message: "I'm fine too, thanks for asking.", likesCount: 10},
+            {id: 3, message: "I'm fine, thanks brother, what about?", likesCount: 32},
             {id: 2, message: "It's my first post.", likesCount: 21},
             {id: 1, message: "Hi, how are you?", likesCount: 12},
         ],
@@ -26,6 +28,11 @@ let state = {
     },
 };
 
+export const updateNewPostText = (text) => {
+    state.profilePage.newPostText = text;
+    renderEntireTree(state);
+}
+
 export const addPost = () => {
     let newPost = {
         id: state.profilePage.posts[0].id + 1,
@@ -37,8 +44,13 @@ export const addPost = () => {
     renderEntireTree(state);
 }
 
-export const updateNewPostText = (text) => {
-    state.profilePage.newPostText = text;
+export const addLike = (id) => {
+    for (let post of state.profilePage.posts) {
+        if (post.id === id) {
+            let postIndex = state.profilePage.posts.length - id;
+            state.profilePage.posts[postIndex].likesCount += 1;
+        }
+    }
     renderEntireTree(state);
 }
 

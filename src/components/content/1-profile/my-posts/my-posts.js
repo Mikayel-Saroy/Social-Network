@@ -5,22 +5,26 @@ import Post from "./Post/post";
 const PLACEHOLDER = "Enter your text.";
 
 
-const MyPosts = ({data, addPost, updateNewPostText}) => {
+const MyPosts = ({data, updateNewPostText, addPost, addLike}) => {
     const {newPostText, posts} = data;
 
     const postElem = posts.map(({id, message, likesCount}) => {
-        return <Post key={id} id={id} message={message} likesCount={likesCount}/>;
+        return <Post key={id}
+                     id={id}
+                     message={message}
+                     likesCount={likesCount}
+                     addLike={addLike}/>;
     })
 
     let newPostElement = React.createRef();
 
-    const processPost = () => {
-        addPost();
-    }
-
     const processNewPostText = () => {
         let post = newPostElement.current.value;
         updateNewPostText(post);
+    }
+
+    const processAddPost = () => {
+        addPost();
     }
 
     return (
@@ -32,7 +36,7 @@ const MyPosts = ({data, addPost, updateNewPostText}) => {
                           ref={newPostElement}
                           value={newPostText}
                           onChange={processNewPostText}/>
-                <button onClick={processPost}>Add Post</button>
+                <button onClick={processAddPost}>Add Post</button>
             </div>
             {postElem}
         </div>
