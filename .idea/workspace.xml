@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f9dfd7c-13f8-4818-a23c-8d765b0a68b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app/app.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/2-messages/contact/contact.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/2-messages/contact/contact.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/social-network.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/social-network.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/1-profile/my-posts/Post/post.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/1-profile/my-posts/Post/post.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/1-profile/my-posts/my-posts.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/1-profile/my-posts/my-posts.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/2-messages/messages.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/2-messages/messages.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/render.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/state.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +40,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/content/2-messages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -73,6 +74,7 @@
       <updated>1617796577895</updated>
       <workItem from="1617796582282" duration="3768000" />
       <workItem from="1618294070443" duration="54912000" />
+      <workItem from="1620306959035" duration="4909000" />
     </task>
     <servers />
   </component>
@@ -89,5 +91,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
