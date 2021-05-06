@@ -1,6 +1,3 @@
-import {renderEntireTree} from "./render";
-
-
 let state = {
     profilePage: {
         newPostText: "",
@@ -28,9 +25,14 @@ let state = {
     },
 };
 
+let rerenderEntireTree = () => {}
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer;
+}
+
 export const updateNewPostText = (text) => {
     state.profilePage.newPostText = text;
-    renderEntireTree(state);
+    rerenderEntireTree();
 }
 
 export const addPost = () => {
@@ -41,7 +43,7 @@ export const addPost = () => {
     };
     state.profilePage.posts = [newPost, ...state.profilePage.posts];
     state.profilePage.newPostText = "";
-    renderEntireTree(state);
+    rerenderEntireTree();
 }
 
 export const addLike = (id) => {
@@ -51,12 +53,12 @@ export const addLike = (id) => {
             state.profilePage.posts[postIndex].likesCount += 1;
         }
     }
-    renderEntireTree(state);
+    rerenderEntireTree();
 }
 
 export const updateNewMessageText = (text) => {
     state.dialogsPage.newMessageText = text;
-    renderEntireTree(state);
+    rerenderEntireTree();
 }
 
 export const addMessage = () => {
@@ -66,7 +68,7 @@ export const addMessage = () => {
     }
     state.dialogsPage.messages = [...state.dialogsPage.messages, newMessage];
     state.dialogsPage.newMessageText = "";
-    renderEntireTree(state);
+    rerenderEntireTree();
 }
 
 export default state;
