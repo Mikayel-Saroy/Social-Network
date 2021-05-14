@@ -2,8 +2,9 @@ import React from "react";
 import st from "./messages.module.scss";
 import Contact from "./contact/contact";
 import Message from "./message/message";
+import {addMessageActionCreator, updateNewMessageActionCreator} from "../../../redux/store";
 
-const Messages = ({data, updateNewMessageText, addMessage}) => {
+const Messages = ({data, dispatch}) => {
     const {newMessageText, contacts, messages} = data;
 
     const contactsEl = contacts.map(({id, name}) => {
@@ -16,13 +17,15 @@ const Messages = ({data, updateNewMessageText, addMessage}) => {
 
     let newMessageElement = React.createRef();
 
-    const processMessage = () => {
-        addMessage();
+    const processUpdateNewMessageText = () => {
+        let message = newMessageElement.current.value;
+        let action = updateNewMessageActionCreator(message);
+        dispatch(action);
     }
 
-    const processNewMessageText = () => {
-        let message = newMessageElement.current.value;
-        updateNewMessageText(message);
+    const processAddMessage = () => {
+        let action = addMessageActionCreator();
+        dispatch(action);
     }
 
     return (
@@ -36,8 +39,8 @@ const Messages = ({data, updateNewMessageText, addMessage}) => {
                     <input type="text"
                            ref={newMessageElement}
                            value={newMessageText}
-                           onChange={processNewMessageText}/>
-                    <button onClick={processMessage}>Send</button>
+                           onChange={() => processUpdateNewMessageText()}/>
+                    <button onClick={processAddMessage}>Send</button>
                 </div>
             </div>
         </div>

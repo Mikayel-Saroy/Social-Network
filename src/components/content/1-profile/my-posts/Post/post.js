@@ -1,15 +1,17 @@
 import React from "react";
 import st from "./post.module.scss";
 import user_icon from "../../../../../assets/icons/user_icon.png";
+import {addLikeActionCreator} from "../../../../../redux/store";
 
 const USER_ALT = "user";
 
 
 const Post = (props) => {
-    const {id, message, likesCount, addLike} = props;
+    const {id, message, likesCount, dispatch} = props;
 
     const processAddLike = () => {
-        addLike(id);
+        let action = addLikeActionCreator(id);
+        dispatch(action);
     }
 
     return (

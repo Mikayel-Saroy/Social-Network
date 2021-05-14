@@ -1,11 +1,12 @@
 import React from "react";
 import st from "./my-posts.module.scss";
 import Post from "./Post/post";
+import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../../redux/store";
 
 const PLACEHOLDER = "Enter your text.";
 
 
-const MyPosts = ({data, updateNewPostText, addPost, addLike}) => {
+const MyPosts = ({data, dispatch}) => {
     const {newPostText, posts} = data;
 
     const postElem = posts.map(({id, message, likesCount}) => {
@@ -13,18 +14,21 @@ const MyPosts = ({data, updateNewPostText, addPost, addLike}) => {
                      id={id}
                      message={message}
                      likesCount={likesCount}
-                     addLike={addLike}/>;
+                     dispatch={dispatch}
+        />;
     })
 
     let newPostElement = React.createRef();
 
     const processNewPostText = () => {
         let post = newPostElement.current.value;
-        updateNewPostText(post);
+        let action = updateNewPostTextActionCreator(post)
+        dispatch(action);
     }
 
     const processAddPost = () => {
-        addPost();
+        let action = addPostActionCreator();
+        dispatch(action);
     }
 
     return (

@@ -4,7 +4,7 @@ import Header from "../header/header.js";
 import Navbar from "../navbar/navbar.js";
 import Profile from "../content/1-profile/profile.js";
 import Messages from "../content/2-messages/messages";
-import {BrowserRouter, Route} from "react-router-dom";
+import {BrowserRouter, Route, Redirect} from "react-router-dom";
 import Users from "../content/3-users/users";
 import News from "../content/4-news/news";
 import Music from "../content/5-music/music";
@@ -13,11 +13,7 @@ import Settings from "../content/6-settings/settings";
 const App = (props) => {
     const {
         state,
-        updateNewPostText,
-        addPost,
-        addLike,
-        updateNewMessageText,
-        addMessage,
+        dispatch,
     } = props;
     const {profilePage, dialogsPage} = state;
 
@@ -28,19 +24,19 @@ const App = (props) => {
                 <div className={st.wrapper}>
                     <Navbar/>
                     <div className={st.content}>
-                        <Route render={() => <Profile data={profilePage}
-                                                      updateNewPostText={updateNewPostText}
-                                                      addPost={addPost}
-                                                      addLike={addLike}/>}
-                               path="/profile"/>
-                        <Route render={() => <Messages data={dialogsPage}
-                                                       updateNewMessageText={updateNewMessageText}
-                                                       addMessage={addMessage}/>}
-                               path="/dialogs"/>
-                        <Route render={() => <Users/>} path="/users"/>
-                        <Route render={() => <News/>} path="/news"/>
-                        <Route render={() => <Music/>} path="/music"/>
-                        <Route render={() => <Settings/>} path="/settings"/>
+                        <Route path="/" render={() => <Redirect to="/profile" />}/>
+                        <Route path="/profile"
+                               render={() => <Profile data={profilePage}
+                                                      dispatch={dispatch}
+                               />}/>
+                        <Route path="/dialogs"
+                               render={() => <Messages data={dialogsPage}
+                                                       dispatch={dispatch}
+                               />}/>
+                        <Route path="/users" render={() => <Users/>}/>
+                        <Route path="/news" render={() => <News/>}/>
+                        <Route path="/music" render={() => <Music/>}/>
+                        <Route path="/settings" render={() => <Settings/>}/>
                     </div>
                 </div>
             </div>
