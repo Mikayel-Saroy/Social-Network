@@ -4,6 +4,9 @@ import Contact from "./contact/contact";
 import Message from "./message/message";
 import {addMessageActionCreator, updateNewMessageActionCreator} from "../../../redux/store";
 
+const PLACEHOLDER = "Enter your message";
+
+
 const Messages = ({data, dispatch}) => {
     const {newMessageText, contacts, messages} = data;
 
@@ -15,10 +18,8 @@ const Messages = ({data, dispatch}) => {
         return <Message key={id} id={id} message={message}/>;
     })
 
-    let newMessageElement = React.createRef();
-
-    const processUpdateNewMessageText = () => {
-        let message = newMessageElement.current.value;
+    const processUpdateNewMessageText = (e) => {
+        let message = e.target.value;
         let action = updateNewMessageActionCreator(message);
         dispatch(action);
     }
@@ -36,10 +37,9 @@ const Messages = ({data, dispatch}) => {
                     {messagesEl}
                 </div>
                 <div className={st.inputBox}>
-                    <input type="text"
-                           ref={newMessageElement}
+                    <input placeholder={PLACEHOLDER}
                            value={newMessageText}
-                           onChange={() => processUpdateNewMessageText()}/>
+                           onChange={processUpdateNewMessageText}/>
                     <button onClick={processAddMessage}>Send</button>
                 </div>
             </div>
