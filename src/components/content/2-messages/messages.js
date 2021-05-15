@@ -2,7 +2,10 @@ import React from "react";
 import st from "./messages.module.scss";
 import Contact from "./contact/contact";
 import Message from "./message/message";
-import {addMessageActionCreator, updateNewMessageActionCreator} from "../../../redux/store";
+import {
+    addMessageActionCreator,
+    updateNewMessageActionCreator
+} from "../../../redux/messages-reducer";
 
 const PLACEHOLDER = "Enter your message";
 

@@ -15,7 +15,7 @@ const App = (props) => {
         state,
         dispatch,
     } = props;
-    const {profilePage, dialogsPage} = state;
+    const {profilePage, messagesPage} = state;
 
     return (
         <BrowserRouter>
@@ -30,7 +30,7 @@ const App = (props) => {
                                                       dispatch={dispatch}
                                />}/>
                         <Route path="/dialogs"
-                               render={() => <Messages data={dialogsPage}
+                               render={() => <Messages data={messagesPage}
                                                        dispatch={dispatch}
                                />}/>
                         <Route path="/users" render={() => <Users/>}/>

@@ -1,7 +1,7 @@
 import React from "react";
 import st from "./my-posts.module.scss";
 import Post from "./Post/post";
-import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../../redux/store";
+import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../../redux/profile-reducer";
 
 const PLACEHOLDER = "Enter your post";
 

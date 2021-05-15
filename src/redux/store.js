@@ -1,8 +1,5 @@
-const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
-const ADD_POST = "ADD-POST";
-const ADD_LIKE = "ADD-LIKE";
-const UPDATE_NEW_MESSAGE_TEXT = "UPDATE-NEW-MESSAGE-TEXT";
-const ADD_MESSAGE = "ADD-MESSAGE";
+import profileReducer from "./profile-reducer";
+import messagesReducer from "./messages-reducer";
 
 
 let store = {
@@ -16,7 +13,7 @@ let store = {
                 {id: 1, message: "Hi, how are you?", likesCount: 12},
             ],
         },
-        dialogsPage: {
+        messagesPage: {
             newMessageText: "",
             contacts: [
                 {id: 1, name: "Benjamin"},
@@ -37,7 +34,7 @@ let store = {
 
     // Primary Methods
     getState() {
-       return this._state;
+        return this._state;
     },
     subscribe(observer) {
         this._subscriber = observer;
@@ -45,39 +42,11 @@ let store = {
 
 
     // Dispatch
-    dispatch(action) {  //  { type: "ABC-DEF" }
-        if (action.type === UPDATE_NEW_POST_TEXT) {
-            this._state.profilePage.newPostText = action.text;
-            this._subscriber();
-        } else if (action.type === ADD_POST) {
-            let newPost = {
-                id: this._state.profilePage.posts[0].id + 1,
-                message: this._state.profilePage.newPostText,
-                likesCount: 0
-            };
-            this._state.profilePage.posts = [newPost, ...this._state.profilePage.posts];
-            this._state.profilePage.newPostText = "";
-            this._subscriber();
-        } else if (action.type === ADD_LIKE) {
-            for (let post of this._state.profilePage.posts) {
-                if (post.id === action.id) {
-                    let postIndex = this._state.profilePage.posts.length - action.id;
-                    this._state.profilePage.posts[postIndex].likesCount += 1;
-                }
-            }
-            this._subscriber();
-        } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
-            this._state.dialogsPage.newMessageText = action.text;
-            this._subscriber();
-        } else if (action.type === ADD_MESSAGE) {
-            let newMessage = {
-                id: this._state.dialogsPage.messages.length + 1,
-                message: this._state.dialogsPage.newMessageText
-            }
-            this._state.dialogsPage.messages = [...this._state.dialogsPage.messages, newMessage];
-            this._state.dialogsPage.newMessageText = "";
-            this._subscriber();
-        }
+    dispatch(action) {
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.messagesPage = messagesReducer(this._state.messagesPage, action);
+
+        this._subscriber();
     },
 
 
@@ -109,39 +78,19 @@ let store = {
     //
     // // Messages Page Methods
     // updateNewMessageText(text) {
-    //     this._state.dialogsPage.newMessageText = text;
+    //     this._state.messagesPage.newMessageText = text;
     //     this._subscriber();
     // },
     // addMessage() {
     //     let newMessage = {
-    //         id: this._state.dialogsPage.messages.length + 1,
-    //         message: this._state.dialogsPage.newMessageText
+    //         id: this._state.messagesPage.messages.length + 1,
+    //         message: this._state.messagesPage.newMessageText
     //     }
-    //     this._state.dialogsPage.messages = [...this._state.dialogsPage.messages, newMessage];
-    //     this._state.dialogsPage.newMessageText = "";
+    //     this._state.messagesPage.messages = [...this._state.messagesPage.messages, newMessage];
+    //     this._state.messagesPage.newMessageText = "";
     //     this._subscriber();
     // }
 }
-
-export const updateNewPostTextActionCreator = (post) => ({
-    type: UPDATE_NEW_POST_TEXT,
-    text: post
-})
-export const addPostActionCreator = () => ({
-    type: ADD_POST
-})
-export const addLikeActionCreator = (id) => ({
-    type: ADD_LIKE,
-    id: id
-})
-export const updateNewMessageActionCreator = (message) => ({
-    type: UPDATE_NEW_MESSAGE_TEXT,
-    text: message
-})
-export const addMessageActionCreator = () => ({
-    type: ADD_MESSAGE
-})
-
 
 export default store;
 window.store = store;

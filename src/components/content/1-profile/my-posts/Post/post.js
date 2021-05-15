@@ -1,7 +1,7 @@
 import React from "react";
 import st from "./post.module.scss";
 import user_icon from "../../../../../assets/icons/user_icon.png";
-import {addLikeActionCreator} from "../../../../../redux/store";
+import {addLikeActionCreator} from "../../../../../redux/profile-reducer";
 
 const USER_ALT = "user";
 
