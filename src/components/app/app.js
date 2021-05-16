@@ -10,11 +10,8 @@ import News from "../content/4-news/news";
 import Music from "../content/5-music/music";
 import Settings from "../content/6-settings/settings";
 
-const App = (props) => {
-    const {
-        state,
-        dispatch,
-    } = props;
+
+const App = ({state, dispatch}) => {
     const {profilePage, messagesPage} = state;
 
     return (

@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f9dfd7c-13f8-4818-a23c-8d765b0a68b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/redux/messages-reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/profile-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/social-network.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/social-network.pptx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/1-profile/my-posts/Post/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/1-profile/my-posts/Post/post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/1-profile/my-posts/my-posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/1-profile/my-posts/my-posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/2-messages/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/2-messages/messages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/messages-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/messages-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +77,7 @@
       <updated>1617796577895</updated>
       <workItem from="1617796582282" duration="3768000" />
       <workItem from="1618294070443" duration="54912000" />
-      <workItem from="1620306959035" duration="14157000" />
+      <workItem from="1620306959035" duration="16471000" />
     </task>
     <servers />
   </component>
