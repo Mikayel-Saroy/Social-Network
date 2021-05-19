@@ -9,11 +9,10 @@ import Users from "../content/3-users/users";
 import News from "../content/4-news/news";
 import Music from "../content/5-music/music";
 import Settings from "../content/6-settings/settings";
+import MessagesContainer from "../content/2-messages/messages-container";
 
 
-const App = ({state, dispatch}) => {
-    const {profilePage, messagesPage} = state;
-
+const App = ({store}) => {
     return (
         <BrowserRouter>
             <div className={st.app}>
@@ -21,15 +20,11 @@ const App = ({state, dispatch}) => {
                 <div className={st.wrapper}>
                     <Navbar/>
                     <div className={st.content}>
-                        <Route path="/" render={() => <Redirect to="/profile" />}/>
+                        <Route path="/" render={() => <Redirect to="/profile"/>}/>
                         <Route path="/profile"
-                               render={() => <Profile data={profilePage}
-                                                      dispatch={dispatch}
-                               />}/>
+                               render={() => <Profile store={store}/>}/>
                         <Route path="/dialogs"
-                               render={() => <Messages data={messagesPage}
-                                                       dispatch={dispatch}
-                               />}/>
+                               render={() => <MessagesContainer store={store}/>}/>
                         <Route path="/users" render={() => <Users/>}/>
                         <Route path="/news" render={() => <News/>}/>
                         <Route path="/music" render={() => <Music/>}/>

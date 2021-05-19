@@ -2,15 +2,11 @@ import React from "react";
 import st from "./messages.module.scss";
 import Contact from "./contact/contact";
 import Message from "./message/message";
-import {
-    addMessageActionCreator,
-    updateNewMessageActionCreator
-} from "../../../redux/messages-reducer";
 
 const PLACEHOLDER = "Enter your message";
 
 
-const Messages = ({data, dispatch}) => {
+const Messages = ({data, processUpdateNewMessageText, processAddMessage}) => {
     const {newMessageText, contacts, messages} = data;
 
     const contactsEl = contacts.map(({id, name}) => {
@@ -20,17 +16,6 @@ const Messages = ({data, dispatch}) => {
     const messagesEl = messages.map(({id, message}) => {
         return <Message key={id} id={id} message={message}/>;
     })
-
-    const processUpdateNewMessageText = (e) => {
-        let message = e.target.value;
-        let action = updateNewMessageActionCreator(message);
-        dispatch(action);
-    }
-
-    const processAddMessage = () => {
-        let action = addMessageActionCreator();
-        dispatch(action);
-    }
 
     return (
         <div className={st.dialogs}>

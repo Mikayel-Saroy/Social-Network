@@ -1,12 +1,11 @@
 import React from "react";
 import st from "./my-posts.module.scss";
 import Post from "./Post/post";
-import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../../redux/profile-reducer";
 
 const PLACEHOLDER = "Enter your post";
 
 
-const MyPosts = ({data, dispatch}) => {
+const MyPosts = ({data, processAddPost, processNewPostText, processAddLike}) => {
     const {newPostText, posts} = data;
 
     const postElem = posts.map(({id, message, likesCount}) => {
@@ -14,20 +13,8 @@ const MyPosts = ({data, dispatch}) => {
                      id={id}
                      message={message}
                      likesCount={likesCount}
-                     dispatch={dispatch}
-        />;
+                     processAddLike={processAddLike}/>;
     })
-
-    const processNewPostText = (e) => {
-        let post = e.target.value;
-        let action = updateNewPostTextActionCreator(post)
-        dispatch(action);
-    }
-
-    const processAddPost = () => {
-        let action = addPostActionCreator();
-        dispatch(action);
-    }
 
     return (
         <div className={st.myPosts}>

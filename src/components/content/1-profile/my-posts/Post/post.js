@@ -1,19 +1,11 @@
 import React from "react";
 import st from "./post.module.scss";
 import user_icon from "../../../../../assets/icons/user_icon.png";
-import {addLikeActionCreator} from "../../../../../redux/profile-reducer";
 
 const USER_ALT = "user";
 
 
-const Post = (props) => {
-    const {id, message, likesCount, dispatch} = props;
-
-    const processAddLike = () => {
-        let action = addLikeActionCreator(id);
-        dispatch(action);
-    }
-
+const Post = ({id, message, likesCount, processAddLike}) => {
     return (
         <div className={st.post}>
             <div className={st.user}>
@@ -21,7 +13,7 @@ const Post = (props) => {
             </div>
             <div className={st.content}>
                 <div className={st.text}>{message}</div>
-                <div className={st.like} onClick={processAddLike}>like {likesCount}</div>
+                <div className={st.like} onClick={() => processAddLike(id)}>like {likesCount}</div>
             </div>
         </div>
     );
