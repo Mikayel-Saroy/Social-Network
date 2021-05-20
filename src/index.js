@@ -1,13 +1,14 @@
 import ReactDOM from "react-dom";
 import store from "./redux/redux-store";
 import App from "./components/app/app";
+import StoreContext from "./store-context";
 
 
 const renderEntireTree = () => {
-    ReactDOM.render(<App state={store.getState()}
-                         dispatch={store.dispatch.bind(store)}
-                         store={store}
-    />, document.getElementById('root'));
+    ReactDOM.render(
+        <StoreContext.Provider value={store}>
+            <App/>
+        </StoreContext.Provider>, document.getElementById('root'));
 };
 
 renderEntireTree();

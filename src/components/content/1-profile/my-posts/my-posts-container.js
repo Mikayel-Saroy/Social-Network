@@ -5,29 +5,39 @@ import {
     updateNewPostTextActionCreator
 } from "../../../../redux/profile-reducer";
 import MyPosts from "./my-posts";
+import StoreContext from "../../../../store-context";
 
 
-const MyPostsContainer = ({data, dispatch}) => {
-    const processNewPostText = (e) => {
-        let post = e.target.value;
-        let action = updateNewPostTextActionCreator(post)
-        dispatch(action);
-    }
+const MyPostsContainer = () => {
+    return <StoreContext.Consumer>
+        {
+            store => {
+                const {dispatch} = store;
+                const data = store.getState().profilePage;
 
-    const processAddPost = () => {
-        let action = addPostActionCreator();
-        dispatch(action);
-    }
+                const processNewPostText = (e) => {
+                    let post = e.target.value;
+                    let action = updateNewPostTextActionCreator(post)
+                    dispatch(action);
+                }
 
-    const processAddLike = (id) => {
-        let action = addLikeActionCreator(id);
-        dispatch(action);
-    }
+                const processAddPost = () => {
+                    let action = addPostActionCreator();
+                    dispatch(action);
+                }
 
-    return <MyPosts data={data}
-                    processAddPost={processAddPost}
-                    processNewPostText={processNewPostText}
-                    processAddLike={processAddLike}/>;
+                const processAddLike = (id) => {
+                    let action = addLikeActionCreator(id);
+                    dispatch(action);
+                }
+
+                return <MyPosts data={data}
+                                processAddPost={processAddPost}
+                                processNewPostText={processNewPostText}
+                                processAddLike={processAddLike}/>;
+            }
+        }
+    </StoreContext.Consumer>
 }
 
 export default MyPostsContainer;

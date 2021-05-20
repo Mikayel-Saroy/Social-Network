@@ -3,7 +3,6 @@ import st from "./app.module.scss";
 import Header from "../header/header.js";
 import Navbar from "../navbar/navbar.js";
 import Profile from "../content/1-profile/profile.js";
-import Messages from "../content/2-messages/messages";
 import {BrowserRouter, Route, Redirect} from "react-router-dom";
 import Users from "../content/3-users/users";
 import News from "../content/4-news/news";
@@ -12,7 +11,7 @@ import Settings from "../content/6-settings/settings";
 import MessagesContainer from "../content/2-messages/messages-container";
 
 
-const App = ({store}) => {
+const App = () => {
     return (
         <BrowserRouter>
             <div className={st.app}>
@@ -20,11 +19,11 @@ const App = ({store}) => {
                 <div className={st.wrapper}>
                     <Navbar/>
                     <div className={st.content}>
-                        <Route path="/" render={() => <Redirect to="/profile"/>}/>
+                        <Route exact path="/" render={() => <Redirect to="/profile"/>}/>
                         <Route path="/profile"
-                               render={() => <Profile store={store}/>}/>
+                               render={() => <Profile/>}/>
                         <Route path="/dialogs"
-                               render={() => <MessagesContainer store={store}/>}/>
+                               render={() => <MessagesContainer/>}/>
                         <Route path="/users" render={() => <Users/>}/>
                         <Route path="/news" render={() => <News/>}/>
                         <Route path="/music" render={() => <Music/>}/>
