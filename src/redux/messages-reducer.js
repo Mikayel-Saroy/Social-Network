@@ -24,12 +24,14 @@ const messagesReducer = (state = initialState, action) => {
             state.newMessageText = action.text;
             return state;
         case ADD_MESSAGE:
+            console.log("XXX");
             let newMessage = {
                 id: state.messages.length + 1,
                 message: state.newMessageText
             }
             state.messages = [...state.messages, newMessage];
             state.newMessageText = "";
+            console.log(state);
             return state;
         default:
             return state;
