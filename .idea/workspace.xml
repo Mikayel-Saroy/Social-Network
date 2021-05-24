@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f9dfd7c-13f8-4818-a23c-8d765b0a68b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/content/3-users/users-container.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/users-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/2-messages/messages-container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/2-messages/messages-container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/3-users/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/3-users/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/users-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +69,7 @@
       <updated>1617796577895</updated>
       <workItem from="1617796582282" duration="3768000" />
       <workItem from="1618294070443" duration="54912000" />
-      <workItem from="1620306959035" duration="37020000" />
+      <workItem from="1620306959035" duration="37731000" />
     </task>
     <servers />
   </component>
