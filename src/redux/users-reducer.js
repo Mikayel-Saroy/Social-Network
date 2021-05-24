@@ -1,10 +1,14 @@
+import user_icon from "./../assets/icons/user_icon.png";
+
 const FOLLOW = "FOLLOW";
 const UNFOLLOW = "UNFOLLOW";
+const SET_USERS = "SET-USERS";
 
 let initialState = {
     users: [
         {
             id: 1,
+            img: user_icon,
             isFollowed: false,
             name: "Mikayel",
             status: "Full stack developer",
@@ -12,6 +16,7 @@ let initialState = {
         },
         {
             id: 2,
+            img: user_icon,
             isFollowed: true,
             name: "Anyut",
             status: "UI/UX designer",
@@ -19,6 +24,7 @@ let initialState = {
         },
         {
             id: 3,
+            img: user_icon,
             isFollowed: true,
             name: "Mary",
             status: "HR in Google",
@@ -26,6 +32,7 @@ let initialState = {
         },
         {
             id: 4,
+            img: user_icon,
             isFollowed: true,
             name: "Jack",
             status: "Residential Architect",
@@ -33,6 +40,7 @@ let initialState = {
         },
         {
             id: 5,
+            img: user_icon,
             isFollowed: false,
             name: "Stephan",
             status: "President of Bugatti Automobiles",
@@ -40,6 +48,7 @@ let initialState = {
         },
         {
             id: 6,
+            img: user_icon,
             isFollowed: false,
             name: "Enzo",
             status: "Founder of Ferrari",
@@ -50,7 +59,7 @@ let initialState = {
 
 const usersReducer = (state = initialState, action) => {
     switch (action.type) {
-        case FOLLOW: {
+        case FOLLOW:
             return {
                 ...state,
                 users: state.users.map(user => {
@@ -61,8 +70,7 @@ const usersReducer = (state = initialState, action) => {
                     }
                 })
             };
-        }
-        case UNFOLLOW: {
+        case UNFOLLOW:
             return {
                 ...state,
                 users: state.users.map(user => {
@@ -73,7 +81,11 @@ const usersReducer = (state = initialState, action) => {
                     }
                 })
             };
-        }
+        case SET_USERS:
+            return {
+                ...state,
+                users: [...state.users, ...action.users]
+            }
         default:
             return state;
     }
@@ -89,4 +101,8 @@ export const followActionCreator = (id) => ({
 export const unfollowActionCreator = (id) => ({
     type: UNFOLLOW,
     id: id
+})
+export const setUsersActionCreator = (users) => ({
+    type: SET_USERS,
+    users: users
 })
