@@ -6,26 +6,21 @@ import Messages from "./messages";
 import {connect} from "react-redux";
 
 
-const mapStateToProps = (state) => {
-    return {
-        data: state.messagesPage
-    };
-}
+const mapStateToProps = (state) => ({
+    data: state.messagesPage
+})
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        processUpdateNewMessageText: (e) => {
-            let message = e.target.value;
-            let action = updateNewMessageActionCreator(message);
-            dispatch(action);
-        },
-        processAddMessage: () => {
-            console.log("ABC");
-            let action = addMessageActionCreator();
-            dispatch(action);
-        }
-    };
-}
+const mapDispatchToProps = (dispatch) => ({
+    processUpdateNewMessageText: (e) => {
+        let message = e.target.value;
+        let action = updateNewMessageActionCreator(message);
+        dispatch(action);
+    },
+    processAddMessage: () => {
+        let action = addMessageActionCreator();
+        dispatch(action);
+    }
+})
 
 const MessagesContainer = connect(mapStateToProps, mapDispatchToProps)(Messages);
 
