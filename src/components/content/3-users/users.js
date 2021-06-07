@@ -60,23 +60,25 @@ const Users = ({data, processFollow, processUnfollow, setUsers}) => {
     // ];
     // if (data.users.length === 0) setUsers(users);
 
-    axios.get("https://social-network.samuraijs.com/api/1.0/users")
-        .then(res => {
-            console.log("Data:  " + res.data.items);
-            console.log("Users: " + data.users.length);
-            if (data.users.length === 0) {
-                setUsers(res.data.items);
-            }
-        })
+    const getUsers = () => {
+        if (data.users.length === 0) {
+            axios.get("https://social-network.samuraijs.com/api/1.0/users")
+                .then(res => {
+                    setUsers(res.data.items);
+                })
+        }
+    }
 
     return (
         <div className={st.users}>
+            <button onClick={getUsers}>Get Users</button>
             {
                 data.users.map(user => {
                     return (
                         <div key={user.id} className={st.user}>
                             <div className={st.left}>
-                                <img className={st.userImage} src={user.img ? user.img : user_icon} alt={user.name}/>
+                                <img className={st.userImage} src={user.img ? user.img : user_icon}
+                                     alt={user.name}/>
                                 {
                                     user.followed
                                         ? <button className={st.followButton}
