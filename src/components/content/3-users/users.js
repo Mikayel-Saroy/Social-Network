@@ -44,7 +44,7 @@ class Users extends Component {
                         return (
                             <div key={user.id} className={st.user}>
                                 <div className={st.left}>
-                                    <img className={st.userImage} src={user.img ? user.img : user_icon}
+                                    <img className={st.userImage} src={user.photos.small ? user.photos.small : user_icon}
                                          alt={user.name}/>
                                     {
                                         user.followed

@@ -19,11 +19,20 @@
       border: 1px solid $primary;
       border-radius: 50%;
       cursor: pointer;
+
+      &:hover {
+        transition: 200ms;
+        color: $white200;
+      }
     }
 
     .activePageNo {
       @extend .pageNo;
       color: $primary;
+
+      &:hover {
+        color: $primary;
+      }
     }
   }
 
