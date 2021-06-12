@@ -8,21 +8,39 @@ const UNFOLLOW = "Unfollow";
 
 
 class Users extends Component {
-    constructor() {
-        super();
-        axios.get("https://social-network.samuraijs.com/api/1.0/users")
+    componentDidMount() {
+        const {pageSize, currentPage} = this.props.data;
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${pageSize}&page=${currentPage}`)
             .then(res => {
                 this.props.setUsers(res.data.items);
             })
     }
 
+    setPage = (pageNo) => {
+        this.props.setPage(pageNo);
+        setTimeout(() => this.componentDidMount(), 0);
+    }
+
     render() {
-        const {data, processFollow, processUnfollow, setUsers} = this.props;
+        const {data, processFollow, processUnfollow} = this.props;
+        const {users, pageSize, totalUsersCount, currentPage} = data;
+
+        let pageCount = Math.ceil(totalUsersCount / pageSize);
+        let pages = [];
+        for (let i = 1; i <= pageCount; i++) pages.push(i);
 
         return (
             <div className={st.users}>
+                <div className={st.navigator}>
+                    {
+                        pages.map(p => <div
+                            className={currentPage === p ? st.activePageNo : st.pageNo}
+                            key={p}
+                            onClick={() => this.setPage(p)}>{p}</div>)
+                    }
+                </div>
                 {
-                    data.users.map(user => {
+                    users.map(user => {
                         return (
                             <div key={user.id} className={st.user}>
                                 <div className={st.left}>

@@ -1,7 +1,12 @@
 import React from "react";
 import Users from "./users";
 import {connect} from "react-redux";
-import {followActionCreator, setUsersActionCreator, unfollowActionCreator} from "../../../redux/users-reducer";
+import {
+    setUsersAC,
+    followAC,
+    unfollowAC,
+    setPageAC
+} from "../../../redux/users-reducer";
 
 
 const mapStateToProps = (state) => ({
@@ -10,15 +15,19 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
     processFollow: (id) => {
-        let action = followActionCreator(id)
+        let action = followAC(id)
         dispatch(action);
     },
     processUnfollow: (id) => {
-        let action = unfollowActionCreator(id);
+        let action = unfollowAC(id);
         dispatch(action);
     },
     setUsers: (users) => {
-        let action = setUsersActionCreator(users);
+        let action = setUsersAC(users);
+        dispatch(action);
+    },
+    setPage: (pageNo) => {
+        let action = setPageAC(pageNo);
         dispatch(action);
     }
 })

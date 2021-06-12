@@ -1,6 +1,6 @@
 import {
-    addMessageActionCreator,
-    updateNewMessageActionCreator
+    addMessageAC,
+    updateNewMessageAC
 } from "../../../redux/messages-reducer";
 import Messages from "./messages";
 import {connect} from "react-redux";
@@ -13,11 +13,11 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
     processUpdateNewMessageText: (e) => {
         let message = e.target.value;
-        let action = updateNewMessageActionCreator(message);
+        let action = updateNewMessageAC(message);
         dispatch(action);
     },
     processAddMessage: () => {
-        let action = addMessageActionCreator();
+        let action = addMessageAC();
         dispatch(action);
     }
 })
