@@ -4,7 +4,8 @@ import {
     setUsersAC,
     followAC,
     unfollowAC,
-    setPageAC
+    setPageAC,
+    toggleIsFetchingAC
 } from "../../../redux/users-reducer";
 import axios from "axios";
 import Users from "./users";
@@ -16,17 +17,19 @@ class UsersAPI extends Component {
         axios.get(`https://social-network.samuraijs.com/api/1.0/users?count=${pageSize}&page=${currentPage}`)
             .then(res => {
                 this.props.setUsers(res.data.items);
+                this.props.toggleIsFetching(false);
             })
     }
 
     setPage = (pageNo) => {
         this.props.setPage(pageNo);
+        this.props.toggleIsFetching(true);
         setTimeout(() => this.componentDidMount(), 0);
     }
 
     render() {
         const {data, processFollow, processUnfollow} = this.props;
-        const {users, pageSize, totalUsersCount, currentPage} = data;
+        const {users, pageSize, totalUsersCount, currentPage, isFetching} = data;
 
         let pageCount = Math.ceil(totalUsersCount / pageSize);
         let pages = [];
@@ -38,6 +41,7 @@ class UsersAPI extends Component {
                       setPage={this.setPage}
                       processFollow={processFollow}
                       processUnfollow={processUnfollow}
+                      isFetching={isFetching}
         />;
     }
 }
@@ -61,6 +65,10 @@ const mapDispatchToProps = (dispatch) => ({
     },
     setPage: (pageNo) => {
         let action = setPageAC(pageNo);
+        dispatch(action);
+    },
+    toggleIsFetching: (isFetching) => {
+        let action = toggleIsFetchingAC(isFetching);
         dispatch(action);
     }
 })
