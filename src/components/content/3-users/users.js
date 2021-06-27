@@ -2,6 +2,7 @@ import React from "react";
 import st from "./users.module.scss";
 import user_icon from "../../../assets/icons/user_icon.png";
 import Preloader from "../../_reusables/preloader/preloader";
+import {NavLink} from "react-router-dom";
 
 const FOLLOW = "Follow";
 const UNFOLLOW = "Unfollow";
@@ -22,8 +23,10 @@ const Users = (props) => {
         return (
             <div key={user.id} className={st.user}>
                 <div className={st.left}>
-                    <img className={st.userImage} src={user.photos.small ? user.photos.small : user_icon}
-                         alt={user.name}/>
+                    <NavLink to={`/profile/${user.id}`}>
+                        <img className={st.userImage} src={user.photos.small ? user.photos.small : user_icon}
+                             alt={user.name}/>
+                    </NavLink>
                     {
                         user.followed
                             ? <button className={st.followButton}
@@ -34,7 +37,9 @@ const Users = (props) => {
                 </div>
                 <div className={st.right}>
                     <div className={st.info}>
-                        <h3>{user.name}</h3>
+                        <NavLink to={`/profile/${user.id}`}>
+                            <h3>{user.name}</h3>
+                        </NavLink>
                         <p>{user.status}</p>
                     </div>
                     <div className={st.location}>

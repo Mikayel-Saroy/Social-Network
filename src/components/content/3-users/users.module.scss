@@ -81,8 +81,15 @@
       border-left: 1px solid $grey90;
       padding-left: 30px;
 
-      .info p {
-        font-style: italic;
+      .info {
+        p {
+          font-style: italic;
+        }
+
+        a {
+          text-decoration: none;
+          color: $grey33;
+        }
       }
 
       .location {

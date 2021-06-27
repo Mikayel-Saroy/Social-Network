@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f9dfd7c-13f8-4818-a23c-8d765b0a68b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/svg/preloader.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_reusables/preloader/preloader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/_reusables/preloader/preloader.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/content/1-profile/profile-container.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/1-profile/profile-info/profile-info.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/1-profile/profile-info/profile-info.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/1-profile/profile-info/profile.info.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/1-profile/profile-info/profile.info.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/1-profile/profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/1-profile/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/content/3-users/users-container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/3-users/users-container.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/content/3-users/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/3-users/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/3-users/users.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/3-users/users.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profile-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile-reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/users-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/users-reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>

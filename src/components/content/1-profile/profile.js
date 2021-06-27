@@ -3,10 +3,10 @@ import st from "./profile.module.scss";
 import ProfileInfo from "./profile-info/profile.info";
 import MyPostsContainer from "./my-posts/my-posts-container";
 
-const Profile = () => {
+const Profile = ({profile}) => {
     return (
         <div className={st.profile}>
-            <ProfileInfo/>
+            <ProfileInfo profile={profile}/>
             <MyPostsContainer/>
         </div>
     );
